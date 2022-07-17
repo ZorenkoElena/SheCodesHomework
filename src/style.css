@@ -1,0 +1,43 @@
+.conteiner {
+	font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
+	color: #264e70;
+	max-width: 600px;
+	margin: 60px auto;
+	padding: 0 30px 60px 30px;
+	border-radius: 4px;
+}
+
+.city {
+	font-size: 25px;
+}
+
+.dayAndTime {
+	font-size: 20px;
+}
+
+.units {
+	font-size: 15px;
+	position: relative;
+	top: -23px;
+}
+.description {
+	font-size: 20px;
+}
+
+.temperature {
+	font-size: 50px;
+}
+
+.main-box {
+	color: #0d2c48;
+}
+
+.search-form {
+	margin-bottom: 15px;
+}
+
+.btn-success {
+	color: #fff;
+	background-color: #28a745;
+	border-color: #28a745;
+}
