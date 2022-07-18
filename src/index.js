@@ -22,11 +22,15 @@ document.querySelector("#dayAndTime").innerHTML = formatDate(today);
 
 let apiKey = "d74cc05cdf52565f559ffa4ab891cb08";
 
+function searchCity(city) {
+	let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+	axios.get(url).then(showRelevantWeather);
+}
+
 function showDesiredPlace(event) {
 	event.preventDefault();
 	let city = document.querySelector("#cityInForm").value;
-	let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-	axios.get(url).then(showRelevantWeather);
+	searchCity(city);
 }
 
 function findCurrentPlace() {
@@ -67,3 +71,5 @@ function showRelevantWeather(response) {
 	let wind = document.querySelector("#wind");
 	wind.innerHTML = response.data.wind.speed;
 }
+
+searchCity("Kiev");
